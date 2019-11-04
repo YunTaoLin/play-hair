@@ -158,6 +158,12 @@ export default {
            let date =   Today.getDate()>9? Today.getDate() : '0'+ Today.getDate()
            return Today.getFullYear()+ "-" + month+ "-" +date;
         }
+    },
+     mounted(){
+        window.scrollTo(0,0)
+        let classVal = document.querySelector('.mainArea').getAttribute("class");
+        classVal = classVal.concat(" updatePage");
+        document.querySelector('.mainArea').setAttribute("class",classVal );
     }
 }
 </script>
