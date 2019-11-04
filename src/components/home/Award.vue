@@ -90,6 +90,9 @@ $tw-font: 'Noto Sans HK', sans-serif;
             @media (max-width:575px) {
                 font-size: 14px;
             }
+            @media (max-width:424px) {
+                font-size: 12px;
+            }
             &:after,
             &:before{
                 content: '';
@@ -99,6 +102,10 @@ $tw-font: 'Noto Sans HK', sans-serif;
                 background-color: #CCC;
                 @media (max-width:575px) {
                     width: 2em;
+                }
+                @media (max-width:424px) {
+                    width: 1em;
+                    margin: 0 .5em;
                 }
             }
         }

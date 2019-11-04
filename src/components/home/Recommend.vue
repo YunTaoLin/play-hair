@@ -154,9 +154,14 @@ $tw-font: 'Noto Sans HK', sans-serif;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 8px;
+    text-align: right;
+    white-space: nowrap;
     @media (max-width:424px) {
-            font-size: 13.5px;
-        }
+        font-size: 13.5px;
+    }
+    @media (max-width:374px) {
+        font-size: 12px;
+    }
 }
 .Recommend_card_text{
     margin: 0;
