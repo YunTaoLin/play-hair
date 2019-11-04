@@ -436,6 +436,9 @@ $tw-font: 'Noto Sans HK', sans-serif;
         font-size: 36px;
         margin-bottom: 40px;
     }
+    P{
+        text-align: center;
+    }
     i{
         font-size: 60px;
         color: $secondary-color;
