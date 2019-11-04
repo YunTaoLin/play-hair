@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div class="loading">
+      <h1>Loading...</h1>
+      <img src="../src/assets/LOGO.jpg" alt="">
+    </div>
     <header class="js-scroll">
       <div class="container">
         <div class="nav">
@@ -52,7 +56,7 @@ export default {
   },
   methods:{
     menuToggle(){
-        $('.header-index').toggleClass('active')
+        $('.js-scroll').toggleClass('active')
         $('.popup-menu').fadeToggle();
         $('.popup-menu  nav').toggleClass('nav-active')
     },
@@ -73,7 +77,16 @@ export default {
     }
   },
   mounted(){
+    $('.popup-menu').hide();
     this.scrollEvent();
+    setTimeout(()=>{
+      $('.loading').fadeOut();
+    },2000)
+  },
+  updated(){
+    $('.js-scroll').removeClass('active')
+    $('.popup-menu').fadeOut();
+    $('.popup-menu  nav').removeClass('nav-active')
   }
 
 }
@@ -86,6 +99,27 @@ $secondary-color:#739A97;
 $special-color:#CC501D;
 $eng-font: 'Oswald', sans-serif;
 $tw-font: 'Noto Sans HK', sans-serif;
+
+//Loading
+.loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    margin-top: 20px;
+    width: 200px;
+    object-fit: cover;
+  }
+}
+
 
 //切換動畫
 .updatePage{
@@ -110,8 +144,13 @@ $tw-font: 'Noto Sans HK', sans-serif;
     background: #fefefe;
     box-sizing: border-box;
     box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.4);
-    z-index: 999;
+    z-index: 998;
     display: flex;
+    //當popup-menu打開時，強制取消透明
+    &.active{
+      opacity: 1  !important;
+      visibility: visible !important;
+    }
     @media (max-width:575px) {
       height: 60px;
     }
@@ -261,6 +300,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     transform: translateX(0);
     transition: .5s;
     
+    
     &.nav-active{
       transform: translateX(-41vw);
       @media (max-width:575px) {
@@ -271,12 +311,15 @@ $tw-font: 'Noto Sans HK', sans-serif;
       margin-top: 20px;
       display: flex;
       flex-direction: column;
-      padding-left: 8px;
+      padding-left: 0px;
       list-style: none;
       li{
         width: 100%;
         font-size: 16px;
         line-height: 18px;
+        @media (max-width:374px) {
+            font-size: 14px;
+        }
         a{
           display: flex;
           color: #242424;

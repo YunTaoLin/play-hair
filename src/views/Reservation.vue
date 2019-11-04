@@ -174,7 +174,8 @@ $tw-font: 'Noto Sans HK', sans-serif;
         background-size: cover;
         .container{
             font-family: $tw-font;
-            height: 80vh;
+            height: 660px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -184,10 +185,13 @@ $tw-font: 'Noto Sans HK', sans-serif;
             // }
             h1{
                 font-size: 32px;
-                margin-top: 60px;
                 text-align: center;
                 color: #333;
-                margin: 40px 0;
+                margin:60px 0 40px ;
+                @media (max-width:575px) {
+                    font-size: 24px;
+                    margin:32px 0 28px ;
+                }
             }
         }
        
@@ -199,9 +203,9 @@ $tw-font: 'Noto Sans HK', sans-serif;
         // background:url('../assets/美1.jpeg');
         background-color: #f2f2f2;
         box-shadow: 0 0 2px 2px rgba(52, 54, 54, 0.2);
-        height: 60vh;
+        height: 540px;
         border-radius: 12px;
-        margin: 0 40px;
+        margin: 0 40px ;
         @media (max-width:767px) {
             margin: 0 0px;
         }
@@ -226,6 +230,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
                 display: flex;
                 align-items: center;
                 color: #666;
+                white-space: nowrap;
                 @media (max-width:767px) {
                     font-size: 14px;
                     margin: 0 12px;
@@ -237,6 +242,14 @@ $tw-font: 'Noto Sans HK', sans-serif;
                     font-size: 12px;
                     padding-left: 4px;
                     height: 48px;
+                    margin: 0 8px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+                @media (max-width:374px) {
+                    font-size: 10px;
+                    padding-left: 2px;
                     &:first-child{
                         margin-left: 0;
                     }
@@ -250,12 +263,12 @@ $tw-font: 'Noto Sans HK', sans-serif;
                     top: -1px;
                     right: -21px;
                     @media (max-width:424px) {
-                        border-left: 20px solid rgb(201, 198, 198);
+                        border-left: 10px solid rgb(201, 198, 198);
                         border-top: 24px solid transparent;
                         border-bottom: 24px solid transparent;
                         position: absolute;
                         top: -1px;
-                        right: -21px;
+                        right: -11px;
                     }
                 }
                 &.active{
@@ -265,6 +278,11 @@ $tw-font: 'Noto Sans HK', sans-serif;
                     font-weight: 700;
                     &:after{
                         border-left: 20px solid $special-color;
+                        @media (max-width:424px) {
+                            border-left: 10px solid $special-color;
+                            top: -1px;
+                            right: -11px;
+                        }
                     }
                 }
             }
@@ -277,7 +295,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    height: 360px;
     h3{
         font-size: 24px;
         color: #444;
@@ -296,7 +314,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    height: 360px;
     .inner{
         margin-top: 20px;
     }
@@ -329,7 +347,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    height: 360px;
     .inner{
         margin-top: 60px;;
     }
@@ -355,7 +373,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 40vh;
+    height: 360px;
     .info{
         margin-top: 60px;;
     }
@@ -406,7 +424,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     flex-direction: column;
     justify-content: center;;
     align-items: center;
-    height: 40vh;
+    height: 360px;
     h2{
         color: $secondary-color;
         font-size: 36px;

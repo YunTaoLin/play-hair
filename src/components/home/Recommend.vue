@@ -21,7 +21,7 @@
                                             <h4 class="Recommend_card_title">華盛頓時尚教主 <span>--</span> Fish Yu</h4>
                                         </div>
                                         <div class="Recommend_card_icon">
-                                            <img src="../../assets/設計師/設計師1.jpeg" alt="愛蜜莉亞">
+                                            <img src="../../assets/設計師/設計師1.jpeg" alt="設計師1">
                                         </div>
                                     </div>
                             </div> 
@@ -38,7 +38,7 @@
                                             <h4 class="Recommend_card_title">翰柏企業CEO <span>--</span> Memory Square</h4>
                                         </div>
                                         <div class="Recommend_card_icon">
-                                            <img src="../../assets/設計師/設計師2.jpeg" alt="四糸乃">
+                                            <img src="../../assets/設計師/設計師2.jpeg" alt="設計師2">
                                         </div>
                                     </div>
                             </div>
@@ -53,7 +53,7 @@
                                                 <h4 class="Recommend_card_title">Taiwan Psy會長 <span>--</span> Wei Cheng</h4>
                                             </div>
                                             <div class="Recommend_card_icon">
-                                                <img src="../../assets/設計師/設計師3.jpeg" alt="Saber">
+                                                <img src="../../assets/設計師/設計師3.jpeg" alt="設計師3">
                                             </div>
                                         </div> 
                             </div>
@@ -69,7 +69,7 @@
                                                 <h4 class="Recommend_card_title">日本暢銷作家 <span>--</span> Shimodate Yuu</h4>
                                             </div>
                                             <div class="Recommend_card_icon">
-                                                <img src="../../assets/設計師/設計師4.jpeg" alt="南琴梨">
+                                                <img src="../../assets/設計師/設計師4.jpeg" alt="設計師4">
                                             </div>
                                         </div> 
                             </div>                         
@@ -154,6 +154,9 @@ $tw-font: 'Noto Sans HK', sans-serif;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 8px;
+    @media (max-width:424px) {
+            font-size: 13.5px;
+        }
 }
 .Recommend_card_text{
     margin: 0;
