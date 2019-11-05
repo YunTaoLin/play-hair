@@ -18,7 +18,7 @@
 
 
                                             </p>
-                                            <h4 class="Recommend_card_title">華盛頓時尚教主 <span>--</span> Fish Yu</h4>
+                                            <h4 class="Recommend_card_title">華盛頓時尚教主 <span>--</span> Jane Yu</h4>
                                         </div>
                                         <div class="Recommend_card_icon">
                                             <img src="../../assets/設計師/設計師1.jpeg" alt="設計師1">

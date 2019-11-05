@@ -37,11 +37,14 @@
                      <div class="inner">
                         <h3>請選擇預約日期：</h3>
                         <input type="date"  v-model="date" :min='today' required="required">
-                        <h3>請選擇時間：<span>上午9點~晚上9點</span></h3>
-                        <input type='time' value="13:30" v-model="time" step='1800' min='09:00' max='21:00' required="required">
+                        <h3>請選擇時間：<span>上午9點~晚上八點半</span></h3>
+                        <select v-model="time" >
+                            <option value="請選擇" selected="true" disabled="true">請選擇時間</option>
+                            <option v-for='item in timeList' :value="item" :key="item">{{item}}</option>
+                        </select>
                         <h3>請選擇服務：</h3>
                         <select v-model="serve" >
-                            <option value="請選擇" selected="true" disabled="true">請選擇服務項目</option>
+                            <option value="請選擇" selected="true" disabled="true">請選擇項目</option>
                             <option value="洗髮">洗髮</option>
                             <option value="剪髮">剪髮</option>
                             <option value="染髮">染髮</option>
@@ -62,6 +65,8 @@
                         <input type="text"  v-model.trim="name" required="required">
                         <h3>請輸入連絡電話：</h3>
                         <input type="tel"  v-model.trim="tel" required="required">
+                        <h3>指定設計師或其他備註：</h3>
+                        <input type="text"  v-model.trim="other" placeholder="可略">
                     </div>
                     <div class="btn-group">
                         <button class="btn-pre" @click="step--">上一步</button>
@@ -77,6 +82,7 @@
                             電話：{{tel}} <br>
                             預約門市：{{store}} <br>
                             時段：{{date}} ， {{time}} <br>
+                            指定或備註：{{other || '無'}}
                         </p>
                     </div>
                     <div class="btn-group">
@@ -95,7 +101,7 @@
                     </div>
                     <div class="form-scuss" v-if="this.step ==5" key="check">
                         <h2>已成功預約!</h2>
-                        <p>提醒您預約時間僅保留十分鐘，逾時不候。</p>
+                        <p>預約時間僅保留十分鐘，逾時不候。</p>
                         <i class="icon icon-smile"></i>
                     </div>
                 </transition>
@@ -119,9 +125,10 @@ export default {
         final:false,
         store:'請選擇',
         date:'',
-        time:'13:30',
+        time:'請選擇',
         serve:'請選擇',
         name:'',
+        other:'',
         tel:'',
         
     }},
@@ -157,6 +164,14 @@ export default {
            let month = Today.getMonth()>9 ? Today.getMonth()+1 : '0'+ Today.getMonth()
            let date =   Today.getDate()>9? Today.getDate() : '0'+ Today.getDate()
            return Today.getFullYear()+ "-" + month+ "-" +date;
+        },
+        timeList(){
+            let list = []
+            for(let i=9; i<21 ; i++){
+                list.push(i+'：'+'00');
+                list.push(i+'：'+'30');
+            }
+            return list;
         }
     },
      mounted(){
@@ -181,7 +196,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
         .container{
             font-family: $tw-font;
             height: 660px;
-            margin-bottom: 20px;
+            margin-bottom: 48px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -355,7 +370,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     align-items: center;
     height: 360px;
     .inner{
-        margin-top: 60px;;
+        margin-top: 20px;;
     }
     h3{
         font-size: 22px;
@@ -367,10 +382,6 @@ $tw-font: 'Noto Sans HK', sans-serif;
         font-size: 18px;
         margin-bottom: 20px;
     }
-     select{
-        padding: 4px 12px;
-        font-size: 18px;
-    }
 }
 //第四步驟
 
@@ -381,7 +392,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     align-items: center;
     height: 360px;
     .info{
-        margin-top: 60px;;
+        margin-top: 40px;;
     }
     h3{
         font-size: 24px;
