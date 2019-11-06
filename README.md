@@ -1,24 +1,13 @@
-# play-hair
+### 玩髮｜模擬專案 [點我](https://yuntaolin.github.io/play-hair/dist/index.html#/)
+***
+這是一個side project的模擬專案，使用 ` Vue.js ` 建立的SPA網站。     
+主題為髮型沙龍店的形象官網，美術風格採簡約式設計。    
+除了基本的首頁介紹，還有熱門髮型展列(瀑布流排版)、服務介紹、店址、預約系統等頁面。  
+   
+預約系統參考了部分餐廳設計，將整個表單分成四個部分，目的在於優化使用者的UX。   
+而RWD方面，除了引用 `bootstrap-grid` 的格線系統外，   
+還針對了不同裝置尺寸的字型大小、排版方式進行多次優化與修改，希望能在不同裝置上都有良好的瀏覽體驗。  
+`備註：圖片素材來源自Pexels免費圖庫`
 
-## Project setup
-```
-npm install
-```
+![Alt text](https://i.imgur.com/zlDEzxR.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
