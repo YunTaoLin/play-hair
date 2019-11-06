@@ -1,6 +1,6 @@
 ### 玩髮｜模擬專案 [點我](https://yuntaolin.github.io/play-hair/dist/index.html#/)
 ***
-這是一個side project的模擬專案，使用 ` Vue.js ` 建立的SPA網站。     
+大家好，這是我自行練習的Side Project，使用的框架為`Vue.js`。     
 主題為髮型沙龍店的形象官網，美術風格採簡約式設計。    
 除了基本的首頁介紹，還有熱門髮型展列(瀑布流排版)、服務介紹、店址、預約系統等頁面。  
    
