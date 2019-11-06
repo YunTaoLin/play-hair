@@ -99,16 +99,13 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="form-scuss" v-if="this.step ==5" key="check">
+                    <div class="form-success" v-if="this.step ==5" key="success">
                         <h2>已成功預約!</h2>
                         <p>預約時間僅保留十分鐘，逾時不候。</p>
                         <i class="icon icon-smile"></i>
                     </div>
                 </transition>
-                 <!-- <p class="error">有欄位還沒有填寫哦~</p> -->
-                
             </div>
-           
         </div>
         <myFooter />
     </div>
@@ -120,7 +117,8 @@ export default {
     components:{
         myFooter
     },
-    data(){return{
+    data(){
+      return{
         step:1,
         final:false,
         store:'請選擇',
@@ -130,7 +128,6 @@ export default {
         name:'',
         other:'',
         tel:'',
-        
     }},
     methods:{
         
@@ -161,8 +158,8 @@ export default {
     computed:{
         today(){
            let Today = new Date()
-           let month = Today.getMonth()>9 ? Today.getMonth()+1 : '0'+ Today.getMonth()
-           let date =   Today.getDate()>9? Today.getDate() : '0'+ Today.getDate()
+           let month = Today.getMonth() > 9 ? Today.getMonth() +1 : '0'+ Today.getMonth() +1
+           let date = Today.getDate() > 9? Today.getDate() : '0'+ Today.getDate()
            return Today.getFullYear()+ "-" + month+ "-" +date;
         },
         timeList(){
@@ -191,8 +188,6 @@ $special-color:#B9CDCB;
 $eng-font: 'Oswald', sans-serif;
 $tw-font: 'Noto Sans HK', sans-serif;
     .resevation{
-        // background:url('../assets/美1.jpeg');
-        background-size: cover;
         .container{
             font-family: $tw-font;
             height: 660px;
@@ -201,18 +196,15 @@ $tw-font: 'Noto Sans HK', sans-serif;
             flex-direction: column;
             justify-content: center;
             justify-content: center;
-            // @media (max-width:767px) {
-            //     height: 80vh;
-            // }
             h1{
-                font-size: 32px;
-                text-align: center;
-                color: #333;
-                margin:60px 0 40px ;
-                @media (max-width:575px) {
-                    font-size: 24px;
-                    margin:32px 0 28px ;
-                }
+              font-size: 32px;
+              text-align: center;
+              color: #333;
+              margin:60px 0 40px ;
+              @media (max-width:575px){
+                  font-size: 24px;
+                  margin:32px 0 28px ;
+              }
             }
         }
        
@@ -221,7 +213,6 @@ $tw-font: 'Noto Sans HK', sans-serif;
     .form{
         padding: 12px;
         border: 4px solid $special-color;
-        // background:url('../assets/美1.jpeg');
         background-color: #f2f2f2;
         box-shadow: 0 0 2px 2px rgba(52, 54, 54, 0.2);
         height: 540px;
@@ -236,7 +227,6 @@ $tw-font: 'Noto Sans HK', sans-serif;
         }
         .step-group{
             display: flex;
-            // background-color: #F00;
             height: 100px;
             justify-content: center;
             align-items: center;
@@ -436,7 +426,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
         stroke-dashoffset: 250%;
     }
 }
-.form-scuss{
+.form-success{
     display: flex;
     flex-direction: column;
     justify-content: center;;
@@ -456,7 +446,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
     }
 }
 
-
+//切換步驟按鈕
 .btn-group{
     display:flex;
     justify-content: center;
@@ -493,23 +483,17 @@ $tw-font: 'Noto Sans HK', sans-serif;
     justify-content: center;
 }
 //過度動畫
-.v-leave{
+.v-leave,
+.v-enter-to{
     opacity: 1;
 }
-.v-leave-active{
-    transition: .5s;
-}
-.v-leave-to{
-    opacity: 0;
-}
-.v-enter{
-    opacity: 0;
-}
+.v-leave-active,
 .v-enter-active{
     transition: .5s;
 }
-.v-enter-to{
-    opacity: 1;
+.v-leave-to,
+.v-enter{
+    opacity: 0;
 }
 
 </style>

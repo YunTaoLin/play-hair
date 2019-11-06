@@ -56,15 +56,15 @@ export default {
   },
   methods:{
     menuToggle(){
-        $('.js-scroll').toggleClass('active')
-        $('.popup-menu').fadeToggle();
-        $('.popup-menu  nav').toggleClass('nav-active')
+      $('.js-scroll').toggleClass('active')
+      $('.popup-menu').fadeToggle();
+      $('.popup-menu  nav').toggleClass('nav-active')
     },
     FB(){
       alert('敬請期待');
     },
     scrollEvent(){
-       $(window).on('scroll',()=>{
+      $(window).on('scroll',()=>{
         let now = $(window).scrollTop();
         if(now >=200 && now > this.pre){
           $('.js-scroll').addClass('fading')

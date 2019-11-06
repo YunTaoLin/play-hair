@@ -27,7 +27,7 @@
                 <router-link to="/reservation">線上預約</router-link>
             </nav>
          </div>
-        <div class="coyRight"><img src="../../assets/icon-去背.png" alt=""> 玩髮 - 模擬專案 Copyright © YunTao.Lin ｜<a href="https://github.com/YunTaoLin"> Github  </a></div>
+        <div class="coyRight"><img src="../../assets/icon-去背.png" alt=""> 玩髮 - 模擬專案 Copyright © YunTao.Lin ｜<a href="https://github.com/YunTaoLin/play-hair"> Github  </a></div>
    </div>
 </template>
 
