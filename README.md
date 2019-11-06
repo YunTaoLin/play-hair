@@ -9,5 +9,5 @@
 還針對了不同裝置尺寸的字型大小、排版方式進行多次優化與修改，希望能在不同裝置上都有良好的瀏覽體驗。  
 `備註：圖片素材來源自Pexels免費圖庫`
 
-![Alt text](https://i.imgur.com/zlDEzxR.png)
+![Alt text](https://github.com/YunTaoLin/play-hair/blob/master/Screenshots/%E6%93%B7%E5%8F%96.PNG)
 
