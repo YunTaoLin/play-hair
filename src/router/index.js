@@ -43,7 +43,7 @@ const routes = [{
 
 const router = new VueRouter({
     routes,
-    mode: 'history'
+    // mode: 'history'  //github page會有bug
 })
 
 export default router
