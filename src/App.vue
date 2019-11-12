@@ -81,7 +81,7 @@ export default {
     this.scrollEvent();
     setTimeout(()=>{
       $('.loading').fadeOut();
-    },2000)
+    },3000)
   },
   updated(){
     $('.js-scroll').removeClass('active')

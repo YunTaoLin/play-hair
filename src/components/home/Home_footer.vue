@@ -21,7 +21,7 @@
          <div class="container">
              <nav>
                 <router-link to="/serve">服務</router-link>
-                <router-link to="/about">髮型</router-link>
+                <router-link to="/popularCut">髮型</router-link>
                 <router-link to="/location">店址</router-link>
                 <a href="javascript:;" @click="FB">粉絲專頁</a>
                 <router-link to="/reservation">線上預約</router-link>
