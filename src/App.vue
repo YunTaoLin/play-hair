@@ -9,7 +9,7 @@
         <div class="nav">
             <div class="log"><img src="@/assets/LOGO.jpg" alt="LOGO"></div>
             <nav>
-              <router-link to="/">HOME | 首頁</router-link>
+              <router-link to="/home">HOME | 首頁</router-link>
               <router-link to="/serve">SERVE | 服務</router-link>
               <router-link to="/popularCut">POPULAR CUT | 熱門髮型</router-link>
               <router-link to="/location">LOATION | 店址</router-link>
@@ -31,7 +31,7 @@
             <nav class="popup-menu-nav col-8 col-sm-5">
               <!-- <h4>menu</h4> -->
               <ul>
-                <li><router-link to="/"><span> HOME | 首頁</span><i class="icon icon-left-dir"></i></router-link></li>
+                <li><router-link to="/home"><span> HOME | 首頁</span><i class="icon icon-left-dir"></i></router-link></li>
                 <li><router-link to="/serve"><span> SERVE | 服務</span><i class="icon icon-left-dir"></i></router-link></li>
                 <li><router-link to="/popularCut"><span> POPULAR CUT | 熱門髮型</span><i class="icon icon-left-dir"></i></router-link></li>
                 <li><router-link to="/location"><span>LOATION | 店址</span><i class="icon icon-left-dir"></i></router-link></li>
@@ -323,6 +323,7 @@ $tw-font: 'Noto Sans HK', sans-serif;
         a{
           display: flex;
           color: #242424;
+          text-decoration: none;
           span{
             display: inline-block;
             width:100%;

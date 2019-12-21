@@ -45,12 +45,13 @@
                             <div class="col-12 col-md-6">
                                         <div class="Recommend_card wow flipInY" data-wow-duration="1s" data-wow-delay="1s">
                                             <div class="Recommend_card_inner">
-                                                <p class="Recommend_card_text">
-                                                   從沒有想過能有CP值這麼高的服務，<br>
-                                                    實惠的價格卻擁有卓越的水準，<br>
-                                                    玩髮讓我在繁忙的生活中依然保持著時尚。 
+                                                <p class="Recommend_card_text" style="font-size:15px;">
+                                                  來玩髮，除了頂上漂亮柔順、出門值得驕傲外，
+                                                  內部裝潢、網站UI/UX設計使顧客體驗極佳。
+                                                  有鑒於美學素養高，至店內消費亦能激發各種美感的培養，
+                                                  非常值得推薦的好店，各位名流走過路過不要錯過。 
                                                 </p>
-                                                <h4 class="Recommend_card_title">Taiwan Psy會長 <span>--</span> Wei Cheng</h4>
+                                                <h4 class="Recommend_card_title">準政大MBA 碩士 <span>--</span> Victoria Cheng</h4>
                                             </div>
                                             <div class="Recommend_card_icon">
                                                 <img src="../../assets/設計師/設計師3.jpeg" alt="設計師3">
@@ -140,6 +141,15 @@ $tw-font: 'Noto Sans HK', sans-serif;
     }
 }
 @media (min-width:992px){
+    .Recommend{
+        padding: 60px 0 140px;
+    }
+    .Recommend_card_inner{
+        padding: 20px 50px;
+        height: 240px;
+    }
+}
+@media (min-width:1024px){
     .Recommend{
         padding: 60px 0 140px;
     }
