@@ -1,5 +1,5 @@
 ### 玩髮｜模擬專案 [點我](https://yuntaolin.github.io/play-hair/dist/index.html#/)
-大家好，這是我自主練習的一份Side Project  
+個人Side Project  
 ***
 #### 網站簡介
  
